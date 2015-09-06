@@ -1,0 +1,87 @@
+ <div ng-controller="extract-domainCtrl">
+
+ <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+ <!--Company Entity-->
+  <form class="form-horizontal" role="form" ng-hide="loadingState">
+  
+   <!--DomainId-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">domain id</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.DomainId}}"></input>
+     </div>
+   </div>
+
+   <!--Domain-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">domain</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.DomainValue}}"></input>
+     </div>
+   </div>
+
+   <!--user id-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">user id</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.UserId}}"></input>
+     </div>
+   </div>
+
+   <!--expire-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">expire</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.Expire | date: 'dd-MM-yyyy'}}"></input>
+     </div>
+   </div>
+
+   <!--company id-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">company id</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.CompanyId}}"></input>
+     </div>
+   </div>
+
+   <!--login-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">login</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.Login}}"></input>
+     </div>
+   </div>
+
+   <!--Password-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">password</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.Password}}"></input>
+     </div>
+   </div>
+
+   <!--AutoRenew-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">auto renew</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.AutoRenew}}"></input>
+     </div>
+   </div>
+
+   <!--Migration Status-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">migration status</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{domain.MigrationStatus}}"></input>
+     </div>
+   </div>
+
+
+
+
+   
+   
+ </div>
+

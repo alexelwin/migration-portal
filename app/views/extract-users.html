@@ -1,0 +1,71 @@
+ <div ng-controller="extract-usersCtrl">
+
+ <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+  <!--main screen-->
+  <div ng-hide="loadingState">  
+    <table st-table="rowCollection" st-safe-src="displayCollection"  class="table table-striped">
+      <thead>
+       <tr>
+        <td colspan="1">
+          <input st-search="" class="form-control search-box" placeholder="search ..." type="text"/>
+        </td>
+        <td colspan="2" class="text-left">
+         <div class="text-left" st-pagination="" st-items-by-page="50" st-displayed-pages="5"></div>
+        </td>
+       </tr>
+       <tr>
+        <th>user id</th>
+       <!-- <th>organisation</th>
+        <th>title</th>
+        <th>job title</th>-->
+        <th>first name</th>
+        <th>last name</th>
+        <!--
+        <th>address1</th>
+        <th>address2</th>
+        <th>address3</th>
+        <th>address4</th>
+        <th>city</th>
+        <th>state</th>
+        <th>postcode</th>
+        <th>country</th>-->
+        <th>phone</th>
+        <!--<th>fax</th>
+        <th>mobile</th>-->
+        <th>email</th>
+        <!--
+        <th>url</th>-->
+       </tr>
+       </tr> 
+      </thead>
+      <tbody>
+       <tr ng-repeat="row in rowCollection">
+        <td>{{row.UserId}}</td>
+       <!-- <td>{{row.Organisation}}</td>
+        <td>{{row.Title}}</td>
+        <td>{{row.JobTitle}}</td>-->
+        <td>{{row.FirstName}}</td>
+        <td>{{row.LastName}}</td>
+        <!--<td>{{row.Address1}}</td>
+        <td>{{row.Address2}}</td>
+        <td>{{row.Address3}}</td>
+        <td>{{row.Address4}}</td>
+        <td>{{row.City}}</td>
+        <td>{{row.State}}</td>
+        <td>{{row.Postcode}}</td>
+        <td>{{row.Country}}</td>-->
+        <td>{{row.Phone}}</td>
+        <!--
+        <td>{{row.Fax}}</td>
+        <td>{{row.Mobile}}</td>-->
+        <td>{{row.Email}}</td>
+        <!--<td>{{row.Url}}</td>-->
+       </tr>
+      </tbody>
+    </table>
+  </div>
+
+ </div>
+

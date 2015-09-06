@@ -1,0 +1,43 @@
+<div ng-controller="migratedCtrl">
+  
+  <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+<!--main screen-->
+<div ng-hide="loadingState">  
+  <table st-table="rowCollection" st-safe-src="displayCollection"  class="table table-striped">
+    <thead>
+     <tr>
+      <td colspan="1">
+        <input st-search="" class="form-control search-box" placeholder="search ..." type="text" tooltip="searching all columns" tooltip-animation="true" tooltip-placement="bottom"/>
+      </td>
+      <td colspan="2" class="text-left">
+       <div class="text-left" st-pagination="" st-items-by-page="50" st-displayed-pages="5"></div>
+      </td>
+     </tr>
+     <tr>
+      <th>virtual id</th>
+      <th>virtual logon</th>
+      <th>company</th>
+      <th>domain</th>
+      <th>partner id</th>
+      <th>partner company</th>
+      <th>migrated</th>
+     </tr>
+     </tr> 
+    </thead>
+    <tbody>
+     <tr ng-repeat="row in rowCollection">
+      <td>{{row.VirtualId}}</td>
+      <td><a href="https://mrcoffee.webcentral.com.au/Authorised/job_add_searchby.cfm?search={{row.Vs | url}}&searchby=vs">{{row.VirtualLogon}}</a></td>
+      <td>{{row.Company}}</td>
+      <td>{{row.Domain}}</td>
+      <td>{{row.PartnerId}}</td>
+      <td>{{row.PartnerCompany}}</td>
+      <td>{{row.Migrated | date: 'dd-MM-yyyy'}}</td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+

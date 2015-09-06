@@ -1,0 +1,12 @@
+ <script type="text/ng-template" id="/views/_modal.html"
+   <div class="modal-header">
+    <div class="modal-title">Enter ur name!</div>
+   </div>
+   <div class="modal-body">
+     <label class="label-control">Name: </label><input type="text" class="form-control" id="name" ng-model="$name"></input> {{name}}
+     <button class="btn btn-primary" ng-click="ok()">ok</button>
+     <button class="btn btn-warning" ng-click="cancel()">cancel</button>
+   </div>
+   <div class="modal-footer"/>
+  </div>
+</script>

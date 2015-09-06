@@ -1,0 +1,11 @@
+
+
+ 
+  <nav ng-if="numPages && pages.length >= 2">
+    <ul class="pagination">
+     <li ng-repeat="page in pages" ng-class="{active: page==currentPage}">
+       <a ng-click="selectPage(page)">{{page}}</a>
+     </li>
+     &nbsp;&nbsp;{{totalItemCount}}
+    </ul>
+   </nav> 

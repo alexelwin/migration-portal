@@ -1,0 +1,50 @@
+ <div ng-controller="extract-domain-billing-linesCtrl">
+
+ <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+  <!--main screen-->
+  <div ng-hide="loadingState">  
+    <table st-table="rowCollection" st-safe-src="displayCollection"  class="table table-striped">
+      <thead>
+       <tr>
+        <td colspan="1">
+          <input st-search="" class="form-control search-box" placeholder="search ..." type="text"/>
+        </td>
+        <td colspan="2" class="text-left">
+         <div class="text-left" st-pagination="" st-items-by-page="50" st-displayed-pages="5"></div>
+        </td>
+       </tr>
+       <tr>
+        <th>domain id</th>
+        <th>product code</th>
+        <th>billing period</th>
+        <th>renewal frequency</th>
+        <th>total fee</th>
+        <th>invoice date</th>
+        <th>next invoice date</th>
+        <th>orderin date</th>
+        <th>currency</th>
+        <th>quantity</th>
+       </tr>
+       </tr> 
+      </thead>
+      <tbody>
+       <tr ng-repeat="row in rowCollection">
+        <td>{{row.DomainId}}</td>
+        <td>{{row.ProductCode}}</td>
+        <td>{{row.BillingPeriod}}</td>
+        <td>{{row.RenewalFrequency}}</td>
+        <td>{{row.TotalFee}}</td>
+        <td>{{row.InvoicedDate | date: 'dd-MM-yyyy'}}</td>
+        <td>{{row.NextInvoiceDate | date: 'dd-MM-yyyy'}}</td>
+        <td>{{row.OrderInDate | date: 'dd-MM-yyyy'}}</td>
+        <td>{{row.Currency}}</td>
+        <td>{{row.Quantity}}</td>
+       </tr>
+      </tbody>
+    </table>
+  </div>
+
+ </div>
+

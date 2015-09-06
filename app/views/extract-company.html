@@ -1,0 +1,179 @@
+ <div ng-controller="extract-companyCtrl">
+
+ <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+ <!--Company Entity-->
+  <form class="form-horizontal" role="form" ng-hide="loadingState">
+  
+   <!--CompanyId-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">company id</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.CompanyID}}"></input>
+     </div>
+   </div>
+   
+   <!--GreenCode-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">greencode</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.GreenCode}}"></input>
+     </div>
+   </div>
+
+   <!--Name-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">name</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Name}}"></input>
+     </div>
+   </div>
+
+   <!--Address1-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">address 1</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Address1}}"></input>
+     </div>
+   </div>
+
+   <!--Address2-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">address 2</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Address2}}"></input>
+     </div>
+   </div>
+
+   <!--Address3-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">address 3</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Address3}}"></input>
+     </div>
+   </div>
+
+   <!--City-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">city</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.City}}"></input>
+     </div>
+   </div>
+
+   <!--State-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">state</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.State}}"></input>
+     </div>
+   </div>
+
+   <!--PostCode-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">postcode</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Postcode}}"></input>
+     </div>
+   </div>
+
+   <!--ACN-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">ACN</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.ACN}}"></input>
+     </div>
+   </div>
+
+   <!--GSTExemption-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">GSTExemption</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.GSTExemption}}"></input>
+     </div>
+   </div>
+
+   <!--Phone-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">phone</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Phone}}"></input>
+     </div>
+   </div>
+
+   <!--Fax-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">fax</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Fax}}"></input>
+     </div>
+   </div>
+
+ <!--Comments-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">comments</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Comments}}"></input>
+     </div>
+   </div>
+
+ <!--Blacklisted-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">blacklisted</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Blacklisted}}"></input>
+     </div>
+   </div>
+
+   <!--User Id-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">user id</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.UserId}}"></input>
+     </div>
+   </div>
+
+   <!--Login-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">login</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Login}}"></input>
+     </div>
+   </div>
+
+   <!--Password-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">password</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Password}}"></input>
+     </div>
+   </div>
+
+   <!--Currency-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">currency</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Currency}}"></input>
+     </div>
+   </div>
+    
+    <!--MigrationStatus-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">migration status</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.MigrationStatus}}"></input>
+     </div>
+   </div>
+
+ <!--Balance-->
+   <div class="form-group">
+     <label class="control-label col-sm-2">balance</label>
+      <div class="col-sm-4">
+       <input type="text" class="form-control" value="{{company.Balance}}"></input>
+     </div>
+   </div>
+
+
+ </div>
+

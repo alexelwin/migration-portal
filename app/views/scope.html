@@ -1,0 +1,43 @@
+<div ng-controller="scopeCtrl">
+  
+   <!--Loading screen-->
+  <div ng-include="'/views/_loading.html'" ng-show="loadingState"></div>
+
+<!--main screen-->
+<div ng-hide="loadingState">  
+  <table st-table="rowCollection" st-safe-src="displayCollection"  class="table table-striped">
+    <thead>
+     <tr>
+      <td colspan="1">
+        <input st-search="" class="form-control search-box" placeholder="search ..." type="text"/>
+      </td>
+      <td colspan="4" >
+       <div  class="text-left" st-pagination="" st-items-by-page="50" st-displayed-pages="5"></div>
+      </td>
+     </tr>
+     <tr>
+      <th>Id</th>
+      <th>VS</th>
+      <th>Company</th>
+      <th>Domain</th>
+      <th>PR</th>
+      <th>PR company</th>
+      <th>Hosting Level</th>
+     </tr>
+     </tr> 
+    </thead>
+    <tbody>
+     <tr ng-repeat="row in rowCollection">
+      <td>{{row.VirtualId}}</td>
+      <td><a ng-click="setActiveCustomer(row.VirtualLogon);" ui-sref="extractPreview" >{{row.VirtualLogon}}</a></td>
+      <td>{{row.Company}}</td>
+      <td>{{row.Domain}}</td>
+      <td>{{row.PartnerId}}</td>
+      <td>{{row.PartnerCompany}}</td>
+      <td>{{row.HostingLevel}}</td>
+     </tr>
+    </tbody>
+  </table>
+</div>
+</div>
+
