@@ -39,6 +39,8 @@
         $scope.redirectToMrCoffee = function(accountNo){
           $window.open('https://mrcoffee.webcentral.com.au/Authorised/job_add_searchby.cfm?search=' + $scope.activeCustomerAccount + '&searchby=vs', '_blank');
         }
+
+       
       
        /**
          * @ngdoc method
